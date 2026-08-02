@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Designer UX/UI & Graphiste — Sofiane Colombo, Marseille">
+    <title>Portfolio S. COLOMBO — Designer UX/UI</title>
+    
+    <link rel="stylesheet" href="./style.css"/>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <a href="./index.html" class="header-name">Sofiane Colombo</a>
+    
+        <nav>
+            <a href="./index.html">Accueil</a>
+            <a href="./travail.html">Mon travail</a>
+            <a href="./a-propos.html">À propos</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+    <section id="home-hero">
+        <div class="hero-text">
+            <span class="hero-eyebrow">Webdesigner · Marseille</span>
+            <h1>Des sites web qui vous ressemblent, pensés pour vos utilisateurs.</h1>
+            <p class="hero-description">
+                Je suis Sofiane, designer UX/UI et créateur de sites web indépendant basé à Marseille. 
+                J'accompagne indépendants, artisans et petites structures dans la création de leur présence 
+                digitale — de la première esquisse à la mise en ligne. Mon approche : comprendre vos besoins 
+                réels avant de dessiner la moindre interface, pour livrer un site qui vous ressemble et que 
+                vos visiteurs comprennent en un coup d'œil. Recherche utilisateur, wireframes, identité 
+                visuelle, développement — je couvre l'ensemble du cycle de conception, avec un accompagnement 
+                pensé pour rester simple, même si vous n'êtes pas à l'aise avec le digital.
+            </p>
+            <a href="./contact.html" class="hero-cta">
+                Discutons de votre projet <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="hero-visual">
+    <div class="laptop-mockup">
+        <div class="laptop-screen">
+            <div class="screen-carousel">
+                <div class="screen-track">
+                    <img src="./asset/moaki-accueil.png" alt="Page d'accueil site Moaki la Fée" class="screen-slide">
+                    <img src="./asset/accueil-hikari.png" alt="Page d'accueil site hikari" class="screen-slide">
+                    <img src="./asset/mon-brevet-accueil.png" alt="Page d'accueil application Mon Brevet" class="screen-slide">
+                </div>
+            </div>
+        </div>
+        <div class="laptop-base"></div>
+    </div>
+    <img src="./asset/mon-brevet-card.png" alt="logo Mon Brevet" class="floating-card floating-card--1">
+    <img src="./asset/hikari-logo.png" alt=" HIKARI" class="floating-card floating-card--2">
+</div>
+    </section>
+</main>
+
+    <footer>
+
+        <p>© 2026 · Sofiane COLOMBO · Marseille</p>
+        <div class="footer-links">
+            <a href="./index.html">Accueil</a>
+            <a href="./realisations.html">Réalisations</a>
+            <a href="./page_contact.html">Contact</a>
+            <a href="https://www.linkedin.com/in/sofiane-colombo-744582396/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+
+    </footer>
+<script>
+    const track = document.querySelector('.screen-track');
+    const slideCount = document.querySelectorAll('.screen-slide').length;
+    let currentSlide = 0;
+
+    if (slideCount > 1) {
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slideCount;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }, 3000);
+    }
+</script>
+</body>
+</html>
