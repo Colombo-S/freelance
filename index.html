@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio Designer UX/UI & Graphiste — Sofiane Colombo, Marseille">
     <title>Portfolio S. COLOMBO — Designer UX/UI</title>
+
+    <link rel="icon" type="image/png" href="./asset/favicon-clb.png">
     
     <link rel="stylesheet" href="./style.css"/>
     
@@ -22,7 +24,9 @@
 
 <body>
     <header>
-        <a href="./index.html" class="header-name">Sofiane Colombo</a>
+        <a href="./index.html" class="header-logo">
+            <img src="./asset/logo-clb-header.png" alt="logo clb">
+        </a>
     
         <nav>
             <a href="./index.html">Accueil</a>
@@ -35,7 +39,6 @@
     <main>
     <section id="home-hero">
         <div class="hero-text">
-            <span class="hero-eyebrow">Webdesigner · Marseille</span>
             <h1>Des sites web qui vous ressemblent, pensés pour vos utilisateurs.</h1>
             <p class="hero-description">
                 Je suis Sofiane, designer UX/UI et créateur de sites web indépendant basé à Marseille. 
@@ -51,31 +54,43 @@
             </a>
         </div>
 
-        <div class="hero-visual">
-    <div class="laptop-mockup">
-        <div class="laptop-screen">
-            <div class="screen-carousel">
-                <div class="screen-track">
-                    <img src="./asset/moaki-accueil.png" alt="Page d'accueil site Moaki la Fée" class="screen-slide">
-                    <img src="./asset/accueil-hikari.png" alt="Page d'accueil site hikari" class="screen-slide">
-                    <img src="./asset/mon-brevet-accueil.png" alt="Page d'accueil application Mon Brevet" class="screen-slide">
+         <div class="hero-visual-col">
+    <div class="hero-visual">
+        <a href="./travail.html" class="laptop-link" aria-label="Voir mon travail">
+            <div class="laptop-mockup">
+                <div class="laptop-screen">
+                    <div class="screen-carousel">
+                        <div class="screen-track">
+                            <img src="./asset/moaki-accueil.png" alt="Page d'accueil site Moaki la Fée" class="screen-slide">
+                            <img src="./asset/accueil-hikari.png" alt="Page d'accueil site hikari" class="screen-slide">
+                            <img src="./asset/mon-brevet-accueil.png" alt="Page d'accueil application Mon Brevet" class="screen-slide">
+                        </div>
+                    </div>
                 </div>
+                <div class="laptop-base"></div>
             </div>
-        </div>
-        <div class="laptop-base"></div>
+        </a>
+        <img src="./asset/mon-brevet-card.png" alt="logo Mon Brevet" class="floating-card floating-card--1">
+        <img src="./asset/hikari-logo.png" alt=" HIKARI" class="floating-card floating-card--2">
     </div>
-    <img src="./asset/mon-brevet-card.png" alt="logo Mon Brevet" class="floating-card floating-card--1">
-    <img src="./asset/hikari-logo.png" alt=" HIKARI" class="floating-card floating-card--2">
+
+    <a href="./travail.html" class="hero-below-link">
+        Voir mon travail <i class="fa-solid fa-arrow-right"></i>
+    </a>
 </div>
     </section>
 </main>
 
     <footer>
 
-        <p>© 2026 · Sofiane COLOMBO · Marseille</p>
+        <a href="./index.html" class="footer-logo">
+            <img src="./asset/logo-clb-footer.png" alt="Logo Sofiane Colombo">
+        </a>
+
         <div class="footer-links">
             <a href="./index.html">Accueil</a>
-            <a href="./realisations.html">Réalisations</a>
+            <a href="./realisations.html">Mon travail</a>
+            <a href="./a-propos.html">À propos</a>
             <a href="./page_contact.html">Contact</a>
             <a href="https://www.linkedin.com/in/sofiane-colombo-744582396/" target="_blank">
                 <i class="fa-brands fa-linkedin"></i>
