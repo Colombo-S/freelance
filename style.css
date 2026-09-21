@@ -365,6 +365,54 @@ footer {
 }
 
 /* =============================================
+   HOMEPAGE — CRAFT LINK BUILD
+   ============================================= */
+#home-method {
+    background-color: var(--ivoire-mid);
+    padding: 80px 30px;
+    text-align: center;
+    border-top: 1px solid #DDD8CC;
+}
+
+#home-method .eyebrow {
+    display: inline-block;
+    font-family: "Fira Sans", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--sauge);
+    margin-bottom: 1rem;
+}
+
+#home-method h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 500;
+    color: var(--ardoise);
+    margin: 0 0 1.2rem;
+}
+
+#home-method .intro-text {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--texte-muted);
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+#home-method .values-grid {
+    max-width: 1100px;
+    margin: 50px auto 0;
+}
+
+#home-cta {
+    text-align: center;
+    padding: 70px 30px 90px;
+}
+
+/* =============================================
    PAGE CONTACT
    ============================================= */
 .contact-page-body {
@@ -1303,6 +1351,18 @@ footer {
     font-size: 1.4rem;
     color: var(--ardoise);
     margin-bottom: 24px;
+}
+
+#about-values .eyebrow {
+    display: block;
+    text-align: center;
+    font-family: "Fira Sans", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--sauge);
+    margin-bottom: 0.8rem;
 }
 
 /* =============================================
