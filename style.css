@@ -50,7 +50,7 @@ header {
 }
 
 .header-logo img {
-    height: 60px;
+    height: 80px;
     width: auto;
     display: block;
 }
@@ -109,7 +109,7 @@ footer {
 }
 
 .footer-logo img {
-    max-height: 80px; 
+    max-height: 90px; 
     width: auto;
     margin-bottom: 1rem;
 }
@@ -369,6 +369,7 @@ footer {
    ============================================= */
 #home-method {
     background-color: var(--ivoire-mid);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cpath d='M28 6 L50 28 L28 50 L6 28 Z' fill='none' stroke='%231A2535' stroke-opacity='0.05' stroke-width='1'/%3E%3C/svg%3E");
     padding: 80px 30px;
     text-align: center;
     border-top: 1px solid #DDD8CC;
@@ -428,8 +429,8 @@ footer {
     align-items: center;
     padding: 20px;
     background-color: var(--ivoire);
-    background-image: radial-gradient(#DDD8CC 1px, transparent 1px);
-    background-size: 20px 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cpath d='M28 6 L50 28 L28 50 L6 28 Z' fill='none' stroke='%231A2535' stroke-opacity='0.05' stroke-width='1'/%3E%3C/svg%3E");
+    background-size: 56px 56px;
 }
 
 .business-card {
@@ -600,11 +601,34 @@ footer {
 }
 
 .intro-divider {
-    width: 48px;
-    height: 3px;
-    background-color: var(--sauge);
+    position: relative;
+    width: 90px;
+    height: 12px;
     margin: 2rem auto 0;
-    border-radius: 2px;
+}
+
+.intro-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: var(--sauge);
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.intro-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--sauge);
+    opacity: 0.4;
+    transform: translateY(-50%);
+    z-index: -1;
 }
 
 #real-projects {
@@ -1237,6 +1261,7 @@ footer {
 
 #about-timeline {
     background-color: var(--ivoire-mid);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cpath d='M28 6 L50 28 L28 50 L6 28 Z' fill='none' stroke='%231A2535' stroke-opacity='0.05' stroke-width='1'/%3E%3C/svg%3E");
     padding: 70px 30px;
 }
 
