@@ -96,10 +96,11 @@ header nav a:hover::after {
    ============================================= */
 footer {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    height: 110px;
-    padding: 8px 40px;
+    gap: 12px;
+    padding: 24px 40px;
     background-color: var(--ardoise);
     border-top: 1px solid var(--ardoise-light);
     color: var(--texte-light);
@@ -109,13 +110,14 @@ footer {
 }
 
 .footer-logo img {
-    max-height: 90px; 
+    max-height: 90px;
     width: auto;
-    margin-bottom: 1rem;
 }
 
 .footer-links {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: 25px;
 }
