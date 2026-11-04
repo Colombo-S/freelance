@@ -1393,6 +1393,200 @@ footer {
 }
 
 /* =============================================
+   PAGE PRESTATIONS
+   ============================================= */
+html {
+    scroll-behavior: smooth;
+}
+
+#presta-hero {
+    text-align: center;
+    padding: 70px 20px 50px;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.presta-eyebrow {
+    display: block;
+    font-family: "Fira Sans", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #3A7A5A;
+    margin-bottom: 16px;
+}
+
+#presta-hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.9rem, 4vw, 2.9rem);
+    font-weight: 500;
+    color: var(--ardoise);
+    line-height: 1.25;
+    margin: 0;
+}
+
+.presta-lead {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--texte-muted);
+    margin: 28px auto 0;
+    max-width: 620px;
+}
+
+.presta-anchors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 32px;
+}
+
+.presta-anchors a {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    color: var(--ardoise);
+    padding: 8px 16px;
+    border: 1px solid #DDD8CC;
+    border-radius: 999px;
+    background-color: var(--blanc);
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.presta-anchors a:hover {
+    border-color: var(--sauge);
+    color: #3A7A5A;
+}
+
+#presta-list {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 30px 60px;
+}
+
+.presta {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 50px;
+    padding: 50px 0;
+    border-top: 1px solid #DDD8CC;
+    scroll-margin-top: 20px;
+}
+
+.presta-head i {
+    font-size: 1.8rem;
+    color: var(--sauge);
+    margin-bottom: 16px;
+    display: block;
+}
+
+.presta-head h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.6rem;
+    color: var(--ardoise);
+    margin: 0 0 14px;
+}
+
+.presta-for {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    font-style: italic;
+    color: var(--texte-muted);
+    margin: 0;
+}
+
+.presta-body p {
+    font-size: 0.98rem;
+    line-height: 1.75;
+    color: var(--texte);
+    margin: 0 0 20px;
+}
+
+.presta-body ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.presta-body li {
+    position: relative;
+    padding: 9px 0 9px 26px;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--texte-muted);
+}
+
+.presta-body li::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 17px;
+    width: 7px;
+    height: 7px;
+    background-color: var(--sauge);
+    transform: rotate(45deg);
+}
+
+
+.presta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 22px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #3A7A5A;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--sauge);
+    transition: color 0.3s ease, gap 0.3s ease;
+}
+
+.presta-link:hover {
+    color: var(--ardoise);
+    gap: 14px;
+}
+
+#presta-combo {
+    background-color: var(--ivoire-mid);
+    text-align: center;
+    padding: 70px 30px;
+}
+
+#presta-combo h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    color: var(--ardoise);
+    margin: 0 0 20px;
+}
+
+#presta-combo p {
+    max-width: 620px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--texte-muted);
+}
+
+#presta-combo a {
+    color: #3A7A5A;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .presta {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 40px 0;
+    }
+}
+
+/* =============================================
    RESPONSIVE
    ============================================= */
 @media (max-width: 1024px) {
