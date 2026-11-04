@@ -1461,18 +1461,20 @@ html {
 }
 
 #presta-list {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px 30px 60px;
+    padding: 0;
 }
 
 .presta {
     display: grid;
     grid-template-columns: 1fr 1.6fr;
     gap: 50px;
-    padding: 50px 0;
-    border-top: 1px solid #DDD8CC;
+    padding: 60px max(30px, calc((100% - 1000px) / 2));
     scroll-margin-top: 20px;
+}
+
+.presta:nth-child(even) {
+    background-color: var(--ivoire-mid);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cpath d='M28 6 L50 28 L28 50 L6 28 Z' fill='none' stroke='%231A2535' stroke-opacity='0.05' stroke-width='1'/%3E%3C/svg%3E");
 }
 
 .presta-head i {
@@ -1582,7 +1584,7 @@ html {
     .presta {
         grid-template-columns: 1fr;
         gap: 20px;
-        padding: 40px 0;
+        padding: 40px 24px;
     }
 }
 
