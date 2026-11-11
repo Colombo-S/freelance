@@ -1631,6 +1631,453 @@ footer {
 }
 
 /* =============================================
+   OFFRES SITE WEB (CARTE ACCUEIL)
+   ============================================= */
+#home-offres {
+    padding: 80px 30px;
+    text-align: center;
+}
+
+#home-offres .eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #3A7A5A;
+    margin-bottom: 1rem;
+}
+
+#home-offres h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 500;
+    color: var(--ardoise);
+    margin: 0 0 1.2rem;
+}
+
+#home-offres .intro-text {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--texte-muted);
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.offres-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: stretch;
+    max-width: 1100px;
+    margin: 50px auto 0;
+    text-align: left;
+}
+
+.offre-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 34px 28px 28px;
+    background-color: var(--blanc);
+    border: 1px solid #DDD8CC;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.offre-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(26, 37, 53, 0.1);
+    border-color: var(--sauge);
+}
+
+.offre-card--featured {
+    background-color: var(--ardoise);
+    border: 2px solid var(--ardoise);
+    box-shadow: 0 18px 45px rgba(26, 37, 53, 0.28);
+}
+
+.offre-card--featured:hover {
+    border-color: var(--sauge);
+    box-shadow: 0 22px 50px rgba(26, 37, 53, 0.35);
+}
+
+.offre-card.offre-card--featured h3 {
+    color: var(--blanc);
+}
+
+.offre-card.offre-card--featured .offre-price {
+    color: var(--sauge-light);
+}
+
+.offre-card--featured .offre-delay,
+.offre-card--featured .offre-list li {
+    color: var(--texte-light);
+}
+
+.offre-card--featured .offre-list {
+    border-top-color: var(--ardoise-light);
+}
+
+.offre-card--featured .offre-badge {
+    background-color: var(--sauge);
+    color: var(--ardoise);
+}
+
+.offre-card--featured .offre-btn--ghost {
+    color: var(--blanc);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.offre-card--featured .offre-btn--ghost:hover {
+    color: var(--sauge-light);
+    border-color: var(--sauge-light);
+}
+
+.offre-card--featured .offre-btn--primary:hover {
+    background-color: var(--sauge-light);
+    border-color: var(--sauge-light);
+    color: var(--ardoise);
+}
+
+.offre-badge {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3A7A5A;
+    color: var(--blanc);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.offre-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.35rem;
+    color: var(--ardoise);
+    margin: 0 0 8px;
+}
+
+.offre-price {
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #3A7A5A;
+    margin: 0 0 6px;
+}
+
+.offre-delay {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--texte-muted);
+    margin: 0 0 20px;
+}
+
+.offre-delay i {
+    color: var(--sauge);
+}
+
+.offre-list {
+    list-style: none;
+    margin: 0 0 24px;
+    padding: 20px 0 0;
+    border-top: 1px solid var(--ivoire-mid);
+    flex: 1;
+}
+
+.offre-list li {
+    position: relative;
+    padding: 6px 0 6px 22px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--texte-muted);
+}
+
+.offre-list li::before {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 13px;
+    width: 6px;
+    height: 6px;
+    background-color: var(--sauge);
+    transform: rotate(45deg);
+}
+
+.offre-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.offre-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.offre-btn--primary {
+    background-color: var(--sauge);
+    color: var(--blanc);
+    border: 1px solid var(--sauge);
+}
+
+.offre-btn--primary:hover {
+    background-color: #3A7A5A;
+    border-color: #3A7A5A;
+}
+
+.offre-btn--ghost {
+    background-color: transparent;
+    color: var(--ardoise);
+    border: 1px solid #DDD8CC;
+}
+
+.offre-btn--ghost:hover {
+    border-color: var(--sauge);
+    color: #3A7A5A;
+}
+
+.offre-note {
+    max-width: 1100px;
+    margin: 28px auto 0;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    font-style: italic;
+    color: var(--texte-muted);
+}
+
+.offre-contact {
+    margin: 30px auto 0;
+    font-family: "Playfair Display", serif;
+    font-size: 1.15rem;
+    color: var(--ardoise);
+}
+
+.offre-contact a {
+    color: #3A7A5A;
+    text-decoration: none;
+    border-bottom: 1px solid var(--sauge);
+}
+
+.offre-contact a:hover {
+    color: var(--ardoise);
+}
+
+/* =============================================
+   PAGE PRESTATIONS : DÉTAIL DES OFFRES SITE
+   ============================================= */
+/* Colonne gauche qui suit le scroll pendant la lecture du détail */
+.presta-head {
+    position: sticky;
+    top: 30px;
+    align-self: start;
+}
+
+.presta-price {
+    display: inline-block;
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #3A7A5A;
+    margin: 0 0 12px;
+}
+
+.presta-price small {
+    display: block;
+    font-family: "Fira Sans", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--texte-muted);
+    margin-top: 4px;
+}
+
+.presta-body h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.1rem;
+    color: var(--ardoise);
+    margin: 28px 0 6px;
+}
+
+.presta-body h3:first-of-type {
+    margin-top: 8px;
+}
+
+.presta-body p.presta-small {
+    font-size: 0.88rem;
+    color: var(--texte-muted);
+    margin: 10px 0 0;
+}
+
+.presta-body a.inline-link {
+    color: #3A7A5A;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid var(--sauge);
+}
+
+.presta-body a.inline-link:hover {
+    color: var(--ardoise);
+}
+
+.presta-choice {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 12px 0 4px;
+}
+
+.presta-choice-item {
+    padding: 18px 20px;
+    background-color: var(--blanc);
+    border: 1px solid #DDD8CC;
+    border-radius: 10px;
+}
+
+.presta-choice-item h4 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.05rem;
+    color: var(--ardoise);
+    margin: 0 0 8px;
+}
+
+.presta-choice-item p {
+    font-size: 0.86rem !important;
+    line-height: 1.6 !important;
+    color: var(--texte-muted) !important;
+    margin: 0 0 8px !important;
+}
+
+.presta-choice-item p:last-child {
+    margin-bottom: 0 !important;
+}
+
+.presta-prices {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6px 0 4px;
+    font-size: 0.9rem;
+}
+
+.presta-prices th,
+.presta-prices td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #DDD8CC;
+    color: var(--texte-muted);
+}
+
+.presta-prices th {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #3A7A5A;
+}
+
+.presta-prices td:first-child {
+    color: var(--ardoise);
+    font-weight: 500;
+}
+
+#presta-inclus {
+    padding: 70px max(30px, calc((100% - 1000px) / 2));
+}
+
+#presta-inclus > h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--ardoise);
+    margin: 0 0 40px;
+}
+
+#presta-inclus .presta-eyebrow {
+    text-align: center;
+}
+
+.inclus-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.inclus-item {
+    padding: 24px;
+    background-color: var(--blanc);
+    border: 1px solid #DDD8CC;
+    border-radius: 12px;
+}
+
+.inclus-item h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Playfair Display", serif;
+    font-size: 1.1rem;
+    color: var(--ardoise);
+    margin: 0 0 10px;
+}
+
+.inclus-item h3 i {
+    color: var(--sauge);
+    font-size: 1rem;
+}
+
+.inclus-item p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--texte-muted);
+    margin: 0;
+}
+
+.inclus-legal {
+    margin: 30px 0 0;
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--texte-muted);
+}
+
+@media (max-width: 900px) {
+    .offres-grid {
+        grid-template-columns: 1fr;
+        max-width: 460px;
+        gap: 34px;
+    }
+    .offre-card--featured {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .presta-choice,
+    .inclus-grid {
+        grid-template-columns: 1fr;
+    }
+    .presta-head {
+        position: static;
+    }
+}
+
+/* =============================================
    RESPONSIVE
    ============================================= */
 @media (max-width: 1024px) {
@@ -1738,4 +2185,185 @@ footer {
         text-align: center;
         line-height: 1.3;
     }
+}
+
+/* =============================================
+   RÉÉQUILIBRAGE ARDOISE
+   Sections sombres pour rapprocher le site
+   de l'univers des réseaux sociaux.
+   ============================================= */
+
+/* Motif losange en sauge pour les fonds ardoise */
+#home-method,
+#presta-combo,
+#about-timeline {
+    background-color: var(--ardoise);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cpath d='M28 6 L50 28 L28 50 L6 28 Z' fill='none' stroke='%237EB89A' stroke-opacity='0.08' stroke-width='1'/%3E%3C/svg%3E");
+    background-size: 56px 56px;
+    border-top: none;
+}
+
+/* 1. Accueil : Craft · Link · Build */
+#home-method .eyebrow {
+    color: var(--sauge);
+}
+
+#home-method h2,
+#home-method .value-item h3 {
+    color: var(--ivoire);
+}
+
+#home-method .intro-text,
+#home-method .value-item p {
+    color: var(--texte-light);
+}
+
+#home-method .value-item i {
+    color: var(--sauge-light);
+}
+
+/* 2. Prestations : Je peux tout combiner */
+#presta-combo .presta-eyebrow {
+    color: var(--sauge);
+}
+
+#presta-combo h2 {
+    color: var(--ivoire);
+}
+
+#presta-combo p {
+    color: var(--texte-light);
+}
+
+#presta-combo a {
+    color: var(--sauge-light);
+    border-bottom: 1px solid var(--sauge);
+}
+
+#presta-combo a:hover {
+    color: var(--blanc);
+}
+
+/* 3. À propos : frise chronologique */
+#about-timeline h2,
+#about-timeline .timeline-content h3 {
+    color: var(--ivoire);
+}
+
+#about-timeline .timeline-content p {
+    color: var(--texte-light);
+}
+
+#about-timeline .timeline-date {
+    color: var(--sauge-light);
+}
+
+#about-timeline .timeline-dot {
+    border-color: var(--ardoise);
+}
+
+/* 4. Bandeaux de contact en fin de page (ardoise moyen) */
+#home-cta,
+#about-cta {
+    background-color: var(--ardoise-mid);
+    padding: 70px 30px;
+}
+
+#home-cta .bottom-cta-text,
+#about-cta .about-cta-text {
+    color: var(--ivoire);
+}
+
+#home-cta .bottom-cta-button,
+#about-cta .hero-cta {
+    background-color: var(--sauge);
+    color: var(--ardoise);
+}
+
+#home-cta .bottom-cta-button:hover,
+#about-cta .hero-cta:hover {
+    background-color: var(--sauge-light);
+    color: var(--ardoise);
+}
+
+/* 5. Contact : carte de visite ardoise */
+.business-card {
+    background-color: var(--ardoise);
+    border-color: var(--ardoise);
+    box-shadow: 10px 10px 0 var(--sauge);
+}
+
+.business-card .card-header h1,
+.business-card .card-header h3 {
+    color: var(--ivoire);
+}
+
+.business-card .job-title {
+    color: var(--sauge);
+}
+
+.business-card .status-badge {
+    color: var(--sauge-light);
+    background-color: rgba(126, 184, 154, 0.12);
+}
+
+.business-card .divider {
+    background: var(--ardoise-light);
+}
+
+.business-card .contact-row {
+    background-color: var(--ardoise-mid);
+    color: var(--texte-light);
+}
+
+.business-card .contact-row:not(.static):hover {
+    background-color: var(--ardoise-light);
+    border-color: var(--sauge);
+    color: var(--blanc);
+}
+
+.business-card .icon-box {
+    background-color: rgba(126, 184, 154, 0.15);
+    color: var(--sauge-light);
+}
+
+.business-card .card-footer a {
+    color: var(--sauge-light);
+}
+
+/* 6. Mon travail : badges et survol des cartes */
+.hub-card-badge {
+    background-color: var(--ardoise);
+    color: var(--ivoire);
+}
+
+.hub-card-wip {
+    background-color: var(--sauge);
+    color: var(--ardoise);
+}
+
+.hub-card-content {
+    transition: background-color 0.3s ease;
+}
+
+.hub-card-content h2,
+.hub-card-content p,
+.hub-card-link {
+    transition: color 0.3s ease;
+}
+
+.hub-card:hover .hub-card-content {
+    background-color: var(--ardoise);
+}
+
+.hub-card:hover .hub-card-content h2 {
+    color: var(--ivoire);
+}
+
+.hub-card:hover .hub-card-content p {
+    color: var(--texte-light);
+}
+
+.hub-card:hover .hub-card-link {
+    color: var(--sauge-light);
 }
